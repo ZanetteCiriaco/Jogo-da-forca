@@ -1,0 +1,77 @@
+
+
+<h3>{{status}}</h3>
+<div class="n" *ngIf="tentativa==5"><img height="150" src="./assets/forca.jpg" >
+  <p class="traco" *ngFor= "let a of tracejado">{{a}}</p></div>
+  
+<div class="n" *ngIf="tentativa==4"><img height="150" src="./assets/cabeça.jpg" >
+  <p class="traco" *ngFor= "let a of tracejado">{{a}}</p></div>
+
+<div class="n" *ngIf="tentativa==3"><img height="150" src="./assets/corpo.jpg" >
+  <p class="traco" *ngFor= "let a of tracejado">{{a}}</p></div>
+
+<div class="n" *ngIf="tentativa==2"><img height="150" src="./assets/braco.jpg" >
+  <p class="traco" *ngFor= "let a of tracejado">{{a}}</p></div>
+
+<div class="n" *ngIf="tentativa==1"><img height="150" src="./assets/perna.jpg" >
+  <p class="traco" *ngFor= "let a of tracejado">{{a}}</p></div>
+
+<div class="n" *ngIf="tentativa==0"><img height="150" src="./assets/perdeu.jpg" >
+  <p><button (click)="Nova()">Nova palavra</button></p></div>
+<br>
+<form>
+    <label>já sabe a resposta?</label>
+    <br>
+    <input name="palpite"type="text"
+      #palpite (change)="Palpite(palpite.value)">
+    <br>
+    
+    <button (click)="VerificarPalpite()">Arriscar  </button>
+    <button (click)="Nova()">Nova palavra</button>
+    <p></p>
+    <button value="a" #a (click) =" Comparar(a.value)">A</button>
+    <button value="b" #b (click) =" Comparar(b.value)">B</button>
+    <button value="c" #c (click) =" Comparar(c.value)">C</button>
+    <button value="d" #d (click) =" Comparar(d.value)">D</button>
+    <button value="e" #e (click) =" Comparar(e.value)">E</button>
+    <button value="f" #f (click) =" Comparar(f.value)">F</button>
+    <button value="g" #g (click) =" Comparar(g.value)">G</button>
+    <button value="h" #h (click) =" Comparar(h.value)">H</button>
+    <button value="i" #i (click) =" Comparar(i.value)">I</button>
+    <button value="j" #j (click) =" Comparar(j.value)">J</button>
+    <button value="k" #k (click) =" Comparar(k.value)">K</button>
+    <button value="l" #l (click) =" Comparar(l.value)">L</button>
+    <button value="m" #m (click) =" Comparar(m.value)">M</button>
+    <button value="n" #n (click) =" Comparar(n.value)">N</button>
+    <button value="o" #o (click) =" Comparar(o.value)">O</button>
+    <br>
+    <button value="p" #p (click) =" Comparar(p.value)">P</button>
+    <button value="q" #q (click) =" Comparar(q.value)">Q</button>
+    <button value="r" #r (click) =" Comparar(r.value)">R</button>
+    <button value="s" #s (click) =" Comparar(s.value)">S</button>
+    <button value="t" #t (click) =" Comparar(t.value)">T</button>
+    <button value="u" #u (click) =" Comparar(u.value)">U</button>
+    <button value="v" #v (click) =" Comparar(v.value)">V</button>
+    <button value="w" #w (click) =" Comparar(w.value)">W</button>
+    <button value="x" #x (click) =" Comparar(x.value)">X</button>
+    <button value="y" #y (click) =" Comparar(y.value)">Y</button>
+    <button value="z" #z (click) =" Comparar(z.value)">Z</button>
+
+  </form>
+  <p></p>
+  Palavras certas : {{acertos}}
+  <br>
+  Tentativas : {{tentativa}}
+    <audio autoplay loop>
+      <source src="assets/musica.mp3" type="audio/mpeg">
+    </audio>
+<!--<input name="l" type="text" maxlength="1"
+#l (change)="PassarLetra(l.value)"> 
+<br>
+<button (click)="Comparar(l.value)">verificar </button>
+<button (click)="Nova()">Nova palavra</button>
+<p></p>
+<ng-container *ngFor="let i of sorteada" class="sorteada"> {{i}}
+
+</ng-container>
+-->
